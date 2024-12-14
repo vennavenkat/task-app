@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('bg1.webp') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#todo-app {
+    background: rgba(82, 41, 14, 0.603); 
+    padding: 30px; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.73);
+    width: 500px;
+    height: auto;
+    margin-right: 200px; 
+    color: white;
+    text-align: center; 
+}
+
+#todo-app h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#todo-app h1 i {
+    margin-right: 10px;
+}
+
+#task-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#new-task {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#add-task {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffbd7acb;
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#add-task:hover {
+    background-color: #883021;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background: rgb(255, 255, 255);
+    color: black;
+    transition: transform 0.2s ease; 
+}
+
+.task:hover {
+    transform: scale(1.05);
+}
+
+.task .actions button {
+    margin-left: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 20px; 
+}
+
+.task .actions button.edit {
+    color: #007bff;
+}
+
+.task .actions button.done {
+    color: #28a745;
+}
+
+.task .actions button.delete {
+    color: #dc3545;
+}
+
+.task .actions button i {
+    pointer-events: none; 
+}
+
+.task.done .task-name {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        justify-content: center; /* Center the content horizontally */
+        align-items: center; /* Center vertically */
+        margin: 0;
+        background-size: cover;
+        padding: 0; /* Remove margin and padding */
+    }
+
+    /* To-Do App Container - Adjust width and margins */
+    #todo-app {
+        width: 90%; /* Use 90% of the screen width */
+        margin: 0; /* Remove extra margin */
+        padding: 15px; /* Adjust padding for mobile */
+    }
+
+    /* Input and Button - Stack vertically */
+    #task-input {
+        flex-direction: column; /* Stack the input and button */
+        align-items: flex-start; /* Align the input to the left */
+        width: 300px;
+    }
+
+    #new-task {
+        margin-bottom: 10px; /* Add spacing below the input field */
+        width: 100%; /* Make the input field full width */
+        padding: 10px;
+    }
+
+    #add-task {
+        width: 100%; /* Make the add button full width */
+        margin-top: 10px;
+        align-items: center;
+        padding: 10px;
+        font-size: 16px; /* Slightly smaller font for mobile */
+    }
+
+    /* Tasks - Adjust size and spacing */
+    .task {
+        padding: 10px;
+        margin-bottom: 15px; /* Increase spacing between tasks */
+        flex-direction: column; /* Stack task name and actions vertically */
+        align-items: flex-start; /* Align task name to the left */
+    }
+
+    .task .actions {
+        margin-top: 10px; /* Add spacing above action buttons */
+        width: 100%; /* Full width for the actions */
+        display: flex;
+        justify-content: space-around; /* Space out the action buttons */
+    }
+
+    /* Smaller font for task name */
+    .task .task-name {
+        font-size: 16px; /* Adjust font size for mobile */
+    }
+    
+    /* Smaller font for buttons */
+    .task .actions button {
+        font-size: 18px;
+    }
+
+    /* Adjust heading size */
+    #todo-app h1 {
+        font-size: 24px; /* Reduce heading size */
+    }
+}

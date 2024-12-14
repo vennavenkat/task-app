@@ -2,7 +2,7 @@
 
 <h1 align="center">To-Do List</h1>
 
-  ![To Do List]()
+  ![To Do List]
 
 
 ## About
